@@ -22,8 +22,17 @@
   background-image: url("./background.jpg");
   background-size: cover;
 }
+.welcome_text {
+  font-weight: 100;
+  text-align: center;
+  word-wrap: break-word;
+
+  line-height: 1.6;
+}
+
 .logo {
   padding: 50px 0px 0px 150px;
+  color: #f8eeb4;
 }
 .info {
   display: flex;
@@ -44,6 +53,10 @@ h1 {
 }
 span h3 {
   font-size: 2.5rem;
+  margin: 10px 0px 10px 0px;
+}
+.spanItems {
+  margin-top: 80px !important;
 }
 .sidebar {
   height: 99.7%;
@@ -52,6 +65,7 @@ span h3 {
   box-shadow: 0 8px 16px 0 rgba(30, 255, 0, 0.137);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  width: 30%;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -126,4 +140,9 @@ hr {
 }
 .detailsValue p {
   color: #a7d129;
+}
+.copyWrite {
+  opacity: 0.2;
+  margin-top: 50px;
+  text-decoration: underline;
 }

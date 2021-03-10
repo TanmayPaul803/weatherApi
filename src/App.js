@@ -15,12 +15,12 @@ function App() {
     setInput(e.target.value);
   };
 
-  const onSearch = () => {
+  const onSearch = async () => {
     // setCityName(input);
     setCitylist(() => {
       return [...cityList, input];
     });
-    axios
+    await axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=079b33b501019bc3f00b59c304494648&units=metric`
       )
@@ -38,9 +38,6 @@ function App() {
           maxTemp: `${response.data.main.temp_max} °C`,
         });
       });
-
-    setInput("");
-    // setAlldata({ temp: `${apiData.main.temp}` });
   };
 
   return (
@@ -67,6 +64,7 @@ function App() {
           </div>
         )}
       </div>
+
       <div className="sidebar">
         <div className="inputarea">
           <input
@@ -86,29 +84,39 @@ function App() {
         </ul>
         <div className="sideBarDesc">
           <hr />
-          <h2>Weather Details</h2>
           {`${apiData.humidity}` === "undefined" ? (
-            `${apiData}` === "" && <p> </p>
+            `${apiData}` === "" && <p> </p> && (
+              <h2 className="welcome_text">
+                Welcome to the weather app where u can search and find the
+                weather of any city or any other location. This app is powered
+                by <a href="https://openweathermap.org/">openweathermap.org</a>.
+                <p className="copyWrite">© Tanmay Paul </p>
+              </h2>
+            )
           ) : (
-            <div className="weatherDetails">
-              <div className="detailsArea">
-                <p>Feels Like:</p>
-                <p>Min Temp:</p>
-                <p>Max Temp:</p>
-                <p>Humidity:</p>
+            <>
+              <h2>Weather Details</h2>
 
-                <p>Wind:</p>
+              <div className="weatherDetails">
+                <div className="detailsArea">
+                  <p>Feels Like:</p>
+                  <p>Min Temp:</p>
+                  <p>Max Temp:</p>
+                  <p>Humidity:</p>
+
+                  <p>Wind:</p>
+                </div>
+
+                <div className="detailsValue">
+                  <p>{`${apiData.feelsLike}`}</p>
+                  <p>{`${apiData.minTemp}`}</p>
+                  <p>{`${apiData.maxTemp}`}</p>
+                  <p>{`${apiData.humidity}`}</p>
+
+                  <p>{`${apiData.windSpeed}km/h`}</p>
+                </div>
               </div>
-
-              <div className="detailsValue">
-                <p>{`${apiData.feelsLike}`}</p>
-                <p>{`${apiData.minTemp}`}</p>
-                <p>{`${apiData.maxTemp}`}</p>
-                <p>{`${apiData.humidity}`}</p>
-
-                <p>{`${apiData.windSpeed}km/h`}</p>
-              </div>
-            </div>
+            </>
           )}
           <hr />
         </div>
