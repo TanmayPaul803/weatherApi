@@ -89,7 +89,8 @@ function App() {
               <h2 className="welcome_text">
                 Welcome to the weather app where u can search and find the
                 weather of any city or any other location. This app is powered
-                by <a href="https://openweathermap.org/">openweathermap.org</a>.
+                by{" "}
+                <a href="https://openweathermap.org/"> openweathermap.org </a>.
                 <p className="copyWrite">© Tanmay Paul </p>
               </h2>
             )
