@@ -22,7 +22,7 @@ function App() {
     });
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=079b33b501019bc3f00b59c304494648&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=079b33b501019bc3f00b59c304494648&units=metric`
       )
       .then((response) => {
         console.log(response);
