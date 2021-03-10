@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  justify-content: space-between;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-image: url("./background.jpg");
+  background-size: cover;
+}
+.logo {
+  padding: 50px 0px 0px 150px;
+}
+.info {
+  display: flex;
+  width: 90%;
+  height: 300px;
+  justify-content: space-evenly;
+}
+span {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+}
+h1 {
+  font-size: 7rem;
+  font-family: "Dosis", sans-serif;
+}
+span h3 {
+  font-size: 2.5rem;
+}
+.sidebar {
+  height: 99.7%;
+  padding-left: 50px;
+  background: #1b1919;
+  box-shadow: 0 8px 16px 0 rgba(30, 255, 0, 0.137);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.inputarea {
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  height: 70px;
+  width: 400px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #616f39;
+  outline: none;
+  font-size: 1.5rem;
+}
+button {
+  margin-left: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: #a7d129;
+  border: none;
+  transition: 1s;
+  outline: none;
+  color: #1b1919;
+}
+button:hover {
+  background-color: rgb(15, 90, 13);
+  transition: 1s;
+  cursor: pointer;
+  color: #f8eeb4;
+}
+.searchIcon {
+  font-size: 2.1rem !important;
+}
+ul {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+li {
+  padding-top: 20px;
+  color: #f8eeb4;
+  text-decoration: none;
+  font-size: 2rem;
+  opacity: 0.2;
+  list-style: none;
+}
+
+hr {
+  margin: 50px 20px 60px 0px;
+  border: 1px solid #b3ff0034;
+}
+.sideBarDesc {
+  padding-right: 20px;
+}
+.sideBarDesc h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #a7d129;
+}
+.weatherDetails {
+  padding: 20px 20px 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.weatherDetails p {
+  font-size: 1.3rem;
+  padding-top: 20px;
+  font-family: "Abel", sans-serif;
+}
+.detailsArea p {
+  color: #f8eeb4;
+}
+.detailsValue p {
+  color: #a7d129;
+}
