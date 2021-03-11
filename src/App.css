@@ -155,7 +155,6 @@ hr {
 @media screen and (max-width: 480px) {
   .App {
     flex-direction: column;
-    overflow: hidden;
   }
   .hero {
     height: 50vh;
