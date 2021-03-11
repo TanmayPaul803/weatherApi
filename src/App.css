@@ -18,8 +18,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 70%;
   background-image: url("./background.jpg");
+  background-position: center;
   background-size: cover;
 }
 .welcome_text {
@@ -29,9 +30,14 @@
 
   line-height: 1.6;
 }
-
+.logodiv {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
 .logo {
-  padding: 50px 0px 0px 150px;
+  padding-top: 10px;
   color: #f8eeb4;
 }
 .info {
@@ -48,7 +54,7 @@ span {
   font-family: "Abel", sans-serif;
 }
 h1 {
-  font-size: 7rem;
+  font-size: 8rem;
   font-family: "Dosis", sans-serif;
 }
 span h3 {
@@ -83,7 +89,6 @@ input {
   font-size: 1.5rem;
 }
 button {
-  margin-left: 50px;
   width: 70px;
   height: 70px;
   background-color: #a7d129;
@@ -145,4 +150,50 @@ hr {
   opacity: 0.2;
   margin-top: 50px;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .hero {
+    height: 50vh;
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .inputarea {
+    width: 100%;
+    flex-direction: row;
+  }
+  input {
+  }
+
+  hr {
+    width: 100%;
+    margin: 50px 0px 60px 0px;
+  }
+  .sideBarDesc {
+    padding: 0;
+  }
+  .weatherDetails {
+    padding: 20px 10px 20px 10px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .info span {
+    height: 120px;
+  }
+  .info {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }

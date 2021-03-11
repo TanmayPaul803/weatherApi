@@ -6,44 +6,55 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 function App() {
   const [input, setInput] = useState("");
-  // const [cityName, setCityName] = useState("");
   const [apiData, setApiData] = useState("");
   const [cityList, setCitylist] = useState([]);
-  // const [allData, setAlldata] = useState({ temp: "" });
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=079b33b501019bc3f00b59c304494648&units=metric`;
 
   const getInput = (e) => {
     setInput(e.target.value);
   };
 
   const onSearch = async () => {
-    // setCityName(input);
     setCitylist(() => {
       return [...cityList, input];
     });
-    await axios
-      .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=079b33b501019bc3f00b59c304494648&units=metric`
-      )
-      .then((response) => {
-        console.log(response);
-        setApiData({
-          temp: `${response.data.main.temp} °C`,
-          name: `${response.data.name}`,
-          icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
-          description: `${response.data.weather[0].description}`,
-          humidity: `${response.data.main.humidity} %`,
-          windSpeed: `${response.data.wind.speed}`,
-          feelsLike: `${response.data.main.feels_like} °C`,
-          minTemp: `${response.data.main.temp_min} °C`,
-          maxTemp: `${response.data.main.temp_max} °C`,
-        });
-      });
+
+    const response = await axios.get(url);
+    const apidata2 = await axios.get(
+      `https://api.weatherapi.com/v1/current.json?key=aa44733df8e04ac7a2d52654211103&q=${response.data.name}&aqi=no`
+    );
+
+    const dateTime = apidata2.data.location.localtime;
+    const fullTime = new Date(dateTime);
+
+    await setApiData({
+      temp: `${response.data.main.temp} °C`,
+      name: `${response.data.name}`,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
+      description: `${response.data.weather[0].description}`,
+      humidity: `${response.data.main.humidity} %`,
+      windSpeed: `${response.data.wind.speed}`,
+      feelsLike: `${response.data.main.feels_like} °C`,
+      minTemp: `${response.data.main.temp_min} °C`,
+      maxTemp: `${response.data.main.temp_max} °C`,
+      // Converted the time into 12 hr format and then assign it to the variable
+      time: `${new Intl.DateTimeFormat("default", {
+        hour12: true,
+        hour: "numeric",
+        minute: "numeric",
+      }).format(fullTime)}`,
+    });
+
+    console.log();
+    console.log(apidata2);
   };
 
   return (
     <div className="App">
       <div className="hero">
-        <h3 className="logo">Weather App</h3>
+        <div className="logodiv">
+          <h3 className="logo">Weather App</h3>
+        </div>
         {`${apiData.humidity}` === "undefined" ? (
           `${apiData}` === "" && <p> </p>
         ) : (
@@ -55,7 +66,7 @@ function App() {
             <span>
               <LocationOnIcon />
               <h3>{apiData.name}</h3>
-              <p>time</p>
+              <p>{apiData.time}</p>
             </span>
             <span>
               <img src={apiData.icon} alt="" />
