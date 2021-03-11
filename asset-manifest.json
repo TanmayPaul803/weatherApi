@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/weatherApi/static/css/main.e32ab747.chunk.css",
-    "main.js": "/weatherApi/static/js/main.1f18ea6f.chunk.js",
-    "main.js.map": "/weatherApi/static/js/main.1f18ea6f.chunk.js.map",
+    "main.css": "/weatherApi/static/css/main.cc0df955.chunk.css",
+    "main.js": "/weatherApi/static/js/main.e1b26e09.chunk.js",
+    "main.js.map": "/weatherApi/static/js/main.e1b26e09.chunk.js.map",
     "runtime-main.js": "/weatherApi/static/js/runtime-main.830f3e33.js",
     "runtime-main.js.map": "/weatherApi/static/js/runtime-main.830f3e33.js.map",
-    "static/js/2.4d5cbc07.chunk.js": "/weatherApi/static/js/2.4d5cbc07.chunk.js",
-    "static/js/2.4d5cbc07.chunk.js.map": "/weatherApi/static/js/2.4d5cbc07.chunk.js.map",
+    "static/js/2.99ae1e91.chunk.js": "/weatherApi/static/js/2.99ae1e91.chunk.js",
+    "static/js/2.99ae1e91.chunk.js.map": "/weatherApi/static/js/2.99ae1e91.chunk.js.map",
     "static/js/3.1ec715e2.chunk.js": "/weatherApi/static/js/3.1ec715e2.chunk.js",
     "static/js/3.1ec715e2.chunk.js.map": "/weatherApi/static/js/3.1ec715e2.chunk.js.map",
     "index.html": "/weatherApi/index.html",
-    "static/css/main.e32ab747.chunk.css.map": "/weatherApi/static/css/main.e32ab747.chunk.css.map",
-    "static/js/2.4d5cbc07.chunk.js.LICENSE.txt": "/weatherApi/static/js/2.4d5cbc07.chunk.js.LICENSE.txt",
+    "static/css/main.cc0df955.chunk.css.map": "/weatherApi/static/css/main.cc0df955.chunk.css.map",
+    "static/js/2.99ae1e91.chunk.js.LICENSE.txt": "/weatherApi/static/js/2.99ae1e91.chunk.js.LICENSE.txt",
     "static/media/App.css": "/weatherApi/static/media/background.155d6803.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.830f3e33.js",
-    "static/js/2.4d5cbc07.chunk.js",
-    "static/css/main.e32ab747.chunk.css",
-    "static/js/main.1f18ea6f.chunk.js"
+    "static/js/2.99ae1e91.chunk.js",
+    "static/css/main.cc0df955.chunk.css",
+    "static/js/main.e1b26e09.chunk.js"
   ]
 }
