@@ -20,7 +20,7 @@ function App() {
       : setCitylist(() => {
           return [...cityList, input];
         });
-
+    setInput("");
     const response = await axios.get(url);
     const apidata2 = await axios.get(
       `https://api.weatherapi.com/v1/current.json?key=aa44733df8e04ac7a2d52654211103&q=${response.data.name}&aqi=no`
