@@ -15,9 +15,11 @@ function App() {
   };
 
   const onSearch = async () => {
-    setCitylist(() => {
-      return [...cityList, input];
-    });
+    input === ""
+      ? alert("Please Enter a city name")
+      : setCitylist(() => {
+          return [...cityList, input];
+        });
 
     const response = await axios.get(url);
     const apidata2 = await axios.get(
@@ -44,9 +46,6 @@ function App() {
         minute: "numeric",
       }).format(fullTime)}`,
     });
-
-    console.log();
-    console.log(apidata2);
   };
 
   return (
