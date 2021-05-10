@@ -164,16 +164,19 @@ hr {
     width: 50%;
   }
   .hero {
-    height: 50vh;
     width: 100%;
+    height: 50vh;
   }
   .sidebar {
     width: 99.8%;
-    height: 50vh;
     padding: 55px;
     margin: 0;
     padding: 0;
     border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
   .inputarea {
     width: 100%;
@@ -191,14 +194,14 @@ hr {
   }
   hr {
     width: 100%;
-    margin-top: 20px;
   }
   .sideBarDesc {
     /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-    padding: 10px;
+    padding: 11px;
+    width: 95%;
   }
   .weatherDetails {
     padding: 20px 10px 20px 10px;
